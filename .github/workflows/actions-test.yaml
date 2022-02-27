@@ -5,3 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello, world"
+  print-envs:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Event name: ${{ github.event_name }}"
+          echo "Actor's username: ${{ github.actor }}"
